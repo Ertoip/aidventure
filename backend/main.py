@@ -17,7 +17,7 @@ with open("installed_packages.txt", "w") as f:
 
 # Initialize OpenAI Client for Chat Completions
 client = OpenAI(
-    api_key="sk-fMEc5NNY_QaOeGDWAPJVTi7jzbDbS2FOohEPeTVeROT3BlbkFJf1Xm4LZIrdALTCIn_UJStEaWu3eKtscqmufLD9dWsA"
+    api_key="sk-"
 )
 
 # Initialize ChromaDB client
