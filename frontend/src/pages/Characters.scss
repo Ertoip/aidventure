@@ -1,0 +1,31 @@
+h2{
+    color: white;
+    display: block;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: fit-content;
+    flex-grow: 1;
+    font-size:2.75rem;
+}
+
+.charactersDisplay{
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-bottom: 6em;
+    display: block;
+    overflow: auto;
+    height: 100vh;
+}
+
+.charactersBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Change to flex-start to prevent left overflow */
+    column-gap: 1em;
+    row-gap: 1em;
+    width: fit-content;
+    overflow-x: auto; /* Add scrollbars when content overflows on x-axis */
+    overflow-y: hidden; /* Hide vertical overflow */
+    padding:0.5rem;
+    flex-grow: 1;
+}

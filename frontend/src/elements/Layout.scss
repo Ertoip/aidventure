@@ -1,0 +1,48 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, transparent, #fff, transparent) 1;  
+
+    position: relative; /* Make sure the position is set */
+    z-index: 20; /* Adjust this value to be higher than the covering element */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 2em;
+}
+
+.logo {
+    color: white;
+    font-size: 2.3rem;
+    margin-left: 2rem;
+    font-family: CinReg;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px; /* Add some spacing between list items */
+}
+
+.layout {
+    background: radial-gradient(
+        ellipse at 20% 0%, /* Adjust these percentages to position the lighter part */
+        #41154D,           /* Darker color */
+        #000000            /* Lighter color */
+    );
+    height: 100vh;
+}

@@ -1,0 +1,105 @@
+.characterDisplay{
+    padding: 1em;
+    height: 100vh;
+    z-index: 10;
+    position: fixed;
+    width: 100vw;
+    hr{
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+        background: linear-gradient(to right, transparent, #fff, transparent);
+        height: 3px;
+        width: 100%;
+        display: block;
+    }
+}
+
+.characterImage{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    border: #3A3F45 2px solid;
+}
+
+.characterDescription{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:larger;
+    letter-spacing: 1px;
+    text-align: justify;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.characterContainer{
+    padding: 1em;
+    background-color: rgb(58, 63, 69, 0.5);
+    border-radius: 10px;
+    border: #3A3F45 1px solid;
+    height: 88vh;
+    display: inline-block;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    width: 100%;
+    margin: auto;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.statsVoice{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    height: 2em;
+    align-items: center; /* This centers items vertically */
+    justify-content: center; /* This centers items horizontally */
+
+    p{
+        width: 50%;
+        text-align: justify;
+        margin-bottom: 0px;
+    }
+
+    img{
+        height: 100%;
+        aspect-ratio: 1/1;
+        max-width: 100%; /* Make sure the image doesn't exceed container width */
+        max-height: 100%; /* Make sure the image doesn't exceed container height */
+        margin-right: 0.3em;
+    }
+}
+
+.end{
+    text-align: end !important;
+    width: 100%;
+}
+
+.topContainer{
+    height: 100vh;
+}
+
+.statsRow{
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to right, transparent, #fff, transparent) 1;  
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.statsList{
+    text-align: center;
+}
+
+
+

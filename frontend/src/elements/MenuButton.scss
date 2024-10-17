@@ -1,0 +1,33 @@
+.custom-button {
+  background-color: transparent; /* No background color */
+  border: none; /* No border */
+  color: gray; /* Default text color */
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: relative; /* Required for the shadow effect */
+  transition: color 0.05s; /* Add transitions for smooth animations */
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  width: 5em;
+
+  /* Define the line that will appear on hover */
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Position the line at the center horizontally */
+    bottom: -2px; /* Adjust this value to control the distance of the line from the text */
+    width: 0; /* Initially, the line has zero width */
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, transparent, #fff, transparent) 1;
+    transform: translateX(-50%); /* Move the line back by half of its width to center it */
+    transition: width 0.1s ease-out; /* Add a smooth transition effect only for width */
+  }
+
+  /* Expand the line on hover */
+  &:hover::after, &:focus::after {
+    width: 100%; /* On hover, the line will expand to 100% width */
+  }
+
+  &:hover, &:focus{
+    color: white;
+  }
+}

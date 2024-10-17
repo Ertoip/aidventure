@@ -1,0 +1,169 @@
+.topContainer {
+    height: 100vh;
+    padding: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+.messageItemUser, .messageItemResponse {
+    background-image: radial-gradient(circle, #a032be4b 20%, #41154d5e 80%, transparent 100%);
+    padding: 10px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    border: 1px solid;
+    border-image: linear-gradient(to right, transparent, #fff, transparent) 1;  
+    color: #fff;
+    border-radius: 10px; /* Optional: makes the message box slightly rounded */
+}
+
+.messageItemResponse {
+    background-image: radial-gradient(circle, #5858585d 20%, #2b2b2b5e 80%, transparent 100%); /* Gray background */
+}
+
+/* Style for 'Generating text...' message */
+.messageItem {
+    background-color: rgba(200, 200, 200, 0.3);
+    padding: 10px;
+    color: #666;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+/* Common styles for all message lists */
+.messageList {
+    flex-grow: 1;
+    margin-bottom: 10px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba(58, 63, 69, 0.5);
+    }
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) rgba(58, 63, 69, 0.5);
+}
+
+/* Custom styles for textarea */
+textarea {
+    border: 1px solid;
+    border-image: linear-gradient(to right, transparent, #fff, transparent) 1;  
+    background-color: rgba(10,10,10,0.5);
+    outline: none;
+    width: 100%;
+    height: auto;
+    min-height: 1.5em; /* Approx height for 1 line */
+    max-height: 7.5em; /* Approx height for 5 lines */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    font-size: 1.25rem;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 3px;
+    resize: none;
+
+    &:hover, &:focus{
+        animation: textareahover 0.2s ease-out both;
+    }
+}
+
+.chatContainer {
+    padding: 1em;
+    background-color: rgba(58, 63, 69, 0.5);
+    border-radius: 10px;
+    border: 1px solid #3A3F45;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba(58, 63, 69, 0.5);
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) rgba(58, 63, 69, 0.5);
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    background-color: rgba(10, 10, 10, 0.5);
+    border: 1px solid;
+    border-image: linear-gradient(to right, transparent, #fff, transparent) 1;
+    border-radius: 3px;
+    padding: 0.5rem;
+    width: 60%;
+    max-width: 100%;
+    margin: 10px auto 0 auto;
+    transition: background-color 0.3s ease;
+
+    &:hover,
+    &:focus-within {
+        background-color: rgba(10, 10, 10, 0.8);
+        border-image: linear-gradient(to right, transparent, #fff 10%, #fff, #fff 90%, transparent) 1;
+    }
+}
+
+.chatInput {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    min-height: 1.5em;
+    max-height: 7.5em;
+    resize: none;
+    outline: none;
+}
+
+.submitButton {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &::after {
+        content: ' →';
+        font-size: 1.2em;
+        margin-left: 10px;
+    }
+}

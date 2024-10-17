@@ -1,0 +1,26 @@
+.NotFound{
+    font-size: 5rem; /* Adjust this value to make the title bigger */
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    z-index: 2;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    margin-top: 35vh;
+
+    /* Media Query for small screens (phones) */
+    @media screen and (max-width: 768px) {
+        font-size: 4rem; /* Adjust the font size for small screens */
+        /* Add any other specific styles you want for small screens here */
+    }
+
+    /* Media Query for medium screens (tablets) */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        font-size: 7rem; /* Adjust the font size for medium screens */
+        /* Add any other specific styles you want for medium screens here */
+    }
+}

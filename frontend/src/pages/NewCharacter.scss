@@ -1,0 +1,199 @@
+.characterDisplay{
+    padding: 1em;
+    height: 100vh;
+    z-index: 10;
+    position: fixed;
+    width: 100vw;
+    hr{
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+        background: linear-gradient(to right, transparent, #fff, transparent);
+        height: 3px;
+        width: 100%;
+        display: block;
+    }
+}
+
+.characterContainer{
+    padding: 1em;
+    background-color: rgb(58, 63, 69, 0.5);
+    border-radius: 10px;
+    border: #3A3F45 1px solid;
+    height: 88vh;
+    display: inline-block;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    width: 100%;
+    margin: auto;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+h1{
+    color: white;
+    display: block;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: fit-content;
+    font-size:3.5rem;
+    text-align: center;
+}
+
+h2{
+    color: white;
+    display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: fit-content;
+    font-size:2.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.inputCharacterCol{
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.characterGeneratedImage{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    border: #3A3F45 2px solid;
+    background-color: rgba(10,10,10,0.5);
+}
+
+.col-lg-3.inputCharacterCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.spinner-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.spinner{
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5rem;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.inputName{
+    font-size:2rem;
+    text-align: center;
+    color: white;
+    border: none;
+    background: none;
+    outline: none; /* Remove focus outline */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    letter-spacing: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, transparent, #fff, transparent) 1;
+    background-image: radial-gradient(at bottom center, rgba(10,10,10,0.5), transparent 60%);
+    width: 100%;
+
+    &:hover, &:focus{
+        background-image: radial-gradient(at bottom center, rgba(10,10,10,0.7), transparent 70%);
+    }
+}
+
+.inputGroup{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+textarea{
+    border: 1px solid;
+    border-image: linear-gradient(to right, transparent, #fff, transparent) 1;  
+    background-color: rgba(10,10,10,0.5);
+    outline: none;
+    width: 100%;
+    height: 33vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    font-size: 1.25rem;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 3px;
+    resize: none;
+
+    &:hover, &:focus{
+        animation: textareahover 0.2s ease-out both;
+    }
+}
+
+@keyframes textareahover{
+    100%{
+        border-image: linear-gradient(to right, transparent, #fff 10%, #fff,  #fff 90%, transparent) 1;
+        background-color: rgba(10,10,10,0.8);
+    }
+}
+
+button {
+    background-color: transparent; /* No background color */
+    border: none; /* No border */
+    color: gray; /* Default text color */
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative; /* Required for the shadow effect */
+    transition: color 0.05s; /* Add transitions for smooth animations */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 5em;
+
+    /* Define the line that will appear on hover */
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%; /* Position the line at the center horizontally */
+        bottom: -2px; /* Adjust this value to control the distance of the line from the text */
+        width: 0; /* Initially, the line has zero width */
+        border-bottom: 2px solid;
+        border-image: linear-gradient(to right, transparent, #fff, transparent) 1;
+        transform: translateX(-50%); /* Move the line back by half of its width to center it */
+        transition: width 0.1s ease-out; /* Add a smooth transition effect only for width */
+    }
+
+    /* Expand the line on hover */
+    &:hover::after {
+        width: 100%; /* On hover, the line will expand to 100% width */
+    }
+
+    &:hover{
+        color: white;
+    }
+}

@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'arima';
+    src: url('./Arima-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal; /* Regular (normal) style */
+    font-style: normal; /* Regular (normal) style */
+}
+
+@font-face {
+    font-family: 'moria';
+    src: url('./MoriaCitadel.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'CinReg';
+    src: url('./CinzelDecorative-Regular.ttf') format('truetype');
+    font-weight: normal; /* Regular style */
+    font-style: normal; /* Normal (non-italic) style */  
+}
+
+@font-face {
+    font-family: 'CinReg';
+    src: url('./CinzelDecorative-Bold.ttf') format('truetype');
+    font-weight: bold; /* Regular style */
+    font-style: normal; /* Normal (non-italic) style */    
+}

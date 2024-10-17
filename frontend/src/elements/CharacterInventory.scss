@@ -1,0 +1,293 @@
+.item{
+    height: fit-content;
+    padding: 0.5rem;
+    width: 50%;
+    background: linear-gradient(rgb(41, 42, 46),rgb(31, 31, 31) 40%);
+
+    border:#363130 1px solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+
+    .icon{
+        height: 5rem;
+        aspect-ratio: 1/1;
+        margin-right: 0.4em;
+        background: linear-gradient(rgba(25, 24, 28, 1), rgba(46, 41, 51, 0.5));
+        border: 2px solid white;
+
+        img{
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;        
+        }
+    }
+
+    &:hover{
+        box-shadow: 0 0px 8px rgba(255, 255, 255, 0.2);
+        background: linear-gradient(to right,
+            #3A3F45,
+            #363130 40%
+        );
+    }
+}
+
+.inventory{
+    height: 50rem;
+}
+
+.equipment{
+    width: fit-content;
+    margin: auto;
+    height: 40%;
+    margin-top: 4em;
+
+
+    .equipmentBlock{
+        width: 6rem;
+        aspect-ratio: 1/1;
+        border: 2px solid white;
+        background: linear-gradient(rgba(25, 24, 28, 1), rgba(46, 41, 51, 0.5));
+        margin: auto;
+        margin: 1.5rem;
+        padding: 0;
+        float: left;
+    }
+
+    .armsBlock{
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .leftHand{
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+
+    .headBlock{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .head{
+        text-align: center;
+    }
+
+    .headAccessory{
+        align-self: flex-end;
+    }
+
+    .nothing{
+        border: transparent;
+        background: transparent;
+    }
+}
+
+.inventoryCol{
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+
+    p{
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: larger;
+        letter-spacing: 1px;
+        margin-bottom: 0px;
+    }
+
+    .common{
+        background: linear-gradient(to right, #7c7c7c,rgb(31, 31, 31) 40%) !important;
+        &:hover{
+            background: linear-gradient(to right,
+                #a4c3b2,
+                #363130 40%
+            ) !important;
+        }
+    }
+
+    .uncommon{
+        background: linear-gradient(to right, #006400,rgb(31, 31, 31) 40%) !important;
+        &:hover{
+            background: linear-gradient(to right,
+                #00B000,
+                #363130 40%
+            ) !important;
+        }
+    }
+
+    .rare{
+        background: linear-gradient(to right, #1b4079,rgb(31, 31, 31) 40%) !important;
+        &:hover{
+            background: linear-gradient(to right,
+                #2B68C4,
+                #363130 40%
+            ) !important;
+        }
+    }
+
+    .epic{
+        background: linear-gradient(to right, #8C00BA,rgb(31, 31, 31) 40%) !important;
+        &:hover{
+            background: linear-gradient(to right,
+                #BD01FB,
+                #363130 40%
+            ) !important;
+        }
+    }
+
+    .legendary{
+        background: linear-gradient(to right, #CC8800,rgb(31, 31, 31) 40%) !important;
+        &:hover{
+            background: linear-gradient(to right,
+                #FFAA00,
+                #363130 40%
+            ) !important;
+        }
+    }
+}
+
+.statusIcons{
+    position: absolute;
+    top: 0.2em;
+    right: 0;
+    padding: 0.4em;
+    height: fit-content;
+
+    img{
+        height: 1.4em;
+        aspect-ratio: 1/1;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+
+.data{
+    height: fit-content;
+    width: 100%;
+}
+
+.numItems{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: fit-content;
+    padding-right: 0.4em;
+}
+
+.scalingGroup{
+    display: flex;
+    justify-content: space-around;
+    width: 5rem;
+    margin: auto;
+    height: 2em;
+    align-items: center; /* This centers items vertically */
+    justify-content: center; /* This centers items horizontally */
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, transparent, #fff, transparent) 1;
+
+    p{
+        width: 50%;
+        text-align: justify;
+        margin-bottom: 0px;
+    }
+
+    img{
+        height: 100%;
+        aspect-ratio: 1/1;
+        max-width: 100%; /* Make sure the image doesn't exceed container width */
+        max-height: 100%; /* Make sure the image doesn't exceed container height */
+        margin-right: 0.3em;
+    }
+}
+
+.effectsRow{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid rgb(58, 63, 69);
+    border-bottom: 1px solid #3A3F45;
+    background: radial-gradient(transparent, rgba(41, 42, 46, 1) 90%);
+    height: fit-content;
+
+    ul{
+        margin-bottom: 0px !important;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    li{
+        width: 100%;
+    }
+
+    p{
+        margin-bottom: 0px !important;
+    }
+}
+
+.descriptionRow{
+    padding: 0.5em;
+    width: 100%;
+    height: fit-content;
+
+    p{
+        font-style: italic;
+    }
+}
+
+.skills{
+    height: fit-content;
+    padding: 1rem;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, transparent, #fff, transparent) 1;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .skillBlock{
+        position: relative;
+        height: 5em;
+        width: 5em;
+        border: 2px solid white;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+        padding: 0px;
+
+        &::after{
+            content: "";
+            position: absolute;
+            width: 4.5em;
+            height: 4.5em;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.3s ease;
+            border: white 1px solid;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .skillBlock:hover::after{
+        transform: translate(-50%, -50%) scale(1)
+    }
+}
